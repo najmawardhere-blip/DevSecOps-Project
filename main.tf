@@ -3,4 +3,5 @@ provider "aws" {
 }
 resource "aws_s3_bucket" "terraformbuckettodaysun" {
   bucket = "terraformbuckettodaysun"  
+   block_public_acls = true
 }
