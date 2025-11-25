@@ -3,8 +3,9 @@ provider "aws" {
 }
 resource "aws_s3_bucket" "terraformbuckettodaysun" {
   bucket = "terraformbuckettodaysun"
+  block_puplic_acls = true
 }
-terraform {
+ {
   backend "s3" {
     # Replace this with your bucket name!
     bucket         = "terraformbuckettodaysun"
