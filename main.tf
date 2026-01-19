@@ -1,6 +1,6 @@
-provider "aws" {
-  region = "eu-west-2" # London region
+resource "random_id" "suffix" {
+  byte_length = 4
 }
-resource "aws_s3_bucket" "terraformbuckettodaysun" {
-  bucket = "terraformbuckettodaysun"  
+resource "aws_s3_bucket" "this" {
+  bucket = "terraformbuckettodaysun-${random_id.suffix.hex}"
 }
